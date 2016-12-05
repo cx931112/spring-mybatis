@@ -2,7 +2,14 @@
 <!DOCTYPE configuration PUBLIC  
      "-//mybatis.org//DTD Config 3.0//EN"  
      "http://mybatis.org/dtd/mybatis-3-config.dtd">  
- <configuration>  
+ <configuration> 
+ <!--配置别名  --> 
+     <typeAliases>
+     <!--此处是交代实体类所在包的方式实现别名 （建议使用） -->
+     <package name="com.spring.entity"/>
+     		<!-- 此处是设置了具体的别名 （不推荐） -->
+		<!-- <typeAlias type="com.spring.entity.User" alias="User"/> -->
+     </typeAliases> 
      <mappers>  
          <mapper resource="com/spring/daoimpl/UserDao.xml"/>  
      </mappers>  

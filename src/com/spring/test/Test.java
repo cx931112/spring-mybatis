@@ -1,5 +1,7 @@
 package com.spring.test;
 
+
+
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.spring.entity.User;
@@ -11,7 +13,7 @@ public class Test {
 		user.setUsername("cx");
 		user.setPassword("123");
 		UserServiceImpl us=(UserServiceImpl)new ClassPathXmlApplicationContext("applicationContext.xml").getBean("userServiceImpl");
-		User userGet=us.select(user);
-		System.out.println(userGet.getUsername());
+		User userget=us.select(user);
+		System.out.println(userget.getUsername());
 	}
 }

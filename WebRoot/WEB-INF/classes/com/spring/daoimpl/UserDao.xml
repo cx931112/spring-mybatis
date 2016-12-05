@@ -2,7 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
   <mapper namespace="com.spring.dao.UserDao">
-  <select id="select" parameterType="com.spring.entity.User" resultType="com.spring.entity.User">
+ <!-- 如果返回类型是list这边不需要声明，interface中返回值类型交代就行--> 
+  <select id="select"  parameterType="User" resultType="User">
    select * from user where username=#{username} and password=#{password}
   </select>
   </mapper>

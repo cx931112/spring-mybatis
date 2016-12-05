@@ -1,5 +1,7 @@
 package com.spring.serviceimpl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -11,8 +13,8 @@ public class UserServiceImpl {
 	@Resource
 private UserDao userDao;
 public User select(User user){
-	User userGet=userDao.select(user);
-	return userGet;
+	List<User> list=(List<User>)userDao.select(user);
+	return list.get(0);
 }
 public void setUserDao(UserDao userDao) {
 	this.userDao = userDao;
